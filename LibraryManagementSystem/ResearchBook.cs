@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem
 {
-    internal class ResearchBook : Iitem
-    {
-        public string Id { get; set; }
+    public class ResearchBook : Iitem
+    {               
         public string Title { get; set; }
         public string Author { get; set; }
         public string Description { get; set; }
-        public bool IsAvailable { get; set; }
-
-        public void ReadContent()
-        {
-          Console.WriteLine($"Reading the content of the research book: {Title} by {Author}");
-          Console.WriteLine($"Description : {Description}");
+        public ResearchBook( string title, string author, string description)
+        {            
+            Title = title;
+            Author = author;
+            Description = description;
         }
+
+       
+       
     }
 
 }

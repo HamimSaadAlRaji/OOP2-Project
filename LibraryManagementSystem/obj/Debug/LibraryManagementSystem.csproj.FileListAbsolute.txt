@@ -5,3 +5,10 @@ C:\Users\SANI\Desktop\C####\LibraryManagementSystem\bin\Debug\LibraryManagementS
 C:\Users\SANI\Desktop\C####\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.pdb
 C:\Users\SANI\Desktop\C####\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
 C:\Users\SANI\Desktop\C####\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
+C:\Users\Administrator\Desktop\OOP Project\OOP2-Project\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe.config
+C:\Users\Administrator\Desktop\OOP Project\OOP2-Project\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.exe
+C:\Users\Administrator\Desktop\OOP Project\OOP2-Project\LibraryManagementSystem\bin\Debug\LibraryManagementSystem.pdb
+C:\Users\Administrator\Desktop\OOP Project\OOP2-Project\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\OOP Project\OOP2-Project\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\OOP Project\OOP2-Project\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.exe
+C:\Users\Administrator\Desktop\OOP Project\OOP2-Project\LibraryManagementSystem\obj\Debug\LibraryManagementSystem.pdb
