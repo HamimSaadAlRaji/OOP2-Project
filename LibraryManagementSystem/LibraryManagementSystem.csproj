@@ -43,12 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogue.cs" />
     <Compile Include="CD.cs" />
     <Compile Include="DVD.cs" />
     <Compile Include="Iitem.cs" />
-    <Compile Include="IItemHandler.cs" />
-    <Compile Include="IitemOperations.cs" />
-    <Compile Include="Operations.cs" />
+    <Compile Include="IitemAdder.cs" />
+    <Compile Include="IitemBorrower.cs" />
+    <Compile Include="IitemRemover.cs" />
+    <Compile Include="IitemWriting.cs" />
+    <Compile Include="ISearchItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ResearchBook.cs" />
