@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static LibraryManagementSystem.CDAdder;
 
 namespace LibraryManagementSystem
 {
@@ -69,7 +70,7 @@ namespace LibraryManagementSystem
 
         private static void HandleResearchBook()
         {
-            string[] Options = { "Add New ResearchBook", "Remove ResearchBook", "Search ResearchBook", "Go Back"};
+            string[] Options = { "Add New ResearchBook", "Remove ResearchBook","Display ResearchBook", "Search ResearchBook", "Go Back"};
             Menu menu = new Menu(Options);
             int choice = menu.Run();
            
@@ -87,12 +88,16 @@ namespace LibraryManagementSystem
                     IitemRemover RemoveresearchBook = new ResearchBookRemover();
                     Catalogue.RemoveFromLibrary(RemoveresearchBook);
                     break;
-                case 2:
+                case 2 : Console.Clear();
+                    IitemDisplay iitemDisplay = new ResearchBookDisplay();
+                    Catalogue.DisplayLibraryItem(iitemDisplay);
+                    break;
+                case 3:
                     Console.Clear();
                     ISearchItem searchItem = new ResearchBookSearcher();
                     Catalogue.SearchFromLibrary(searchItem);
                     break;
-                case 3:
+                case 4:
                     return;
 
 
@@ -192,8 +197,8 @@ namespace LibraryManagementSystem
                 
                 case 0:
                     Console.Clear();
-                    IitemAdder DVDAdder = new DVDAdder();
-                    Catalogue.AddToLibrary(DVDAdder);
+                    IitemAdder dvdadder = new DVDAdder();
+                    Catalogue.AddToLibrary(dvdadder);
                     break;
                 case 1:
                     Console.Clear();

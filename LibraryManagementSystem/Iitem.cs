@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem
 {
-    public interface Iitem
+   /* public interface Iitem
     {       
         string Title { get; set; }
         string Author { get; set; }
         string Description { get; set; }      
         
-    }
+    }*/
    
 
 

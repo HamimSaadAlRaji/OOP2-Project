@@ -49,6 +49,7 @@
     <Compile Include="Iitem.cs" />
     <Compile Include="IitemAdder.cs" />
     <Compile Include="IitemBorrower.cs" />
+    <Compile Include="IitemDisplay.cs" />
     <Compile Include="IitemRemover.cs" />
     <Compile Include="IitemWriting.cs" />
     <Compile Include="ISearchItem.cs" />
