@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem
 {
-    public class ResearchBook : Iitem
+    public class ResearchBook 
     {               
         public string Title { get; set; }
         public string Author { get; set; }

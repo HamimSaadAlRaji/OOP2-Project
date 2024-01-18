@@ -52,6 +52,10 @@ namespace LibraryManagementSystem
             string description = Console.ReadLine();
             WriteItem.Write(title, description );
         }
+        public static void DisplayLibraryItem(IitemDisplay iitemDisplay)
+        {
+            iitemDisplay.Display();
+        }
 
     }
 }

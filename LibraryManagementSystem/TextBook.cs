@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagementSystem
 {
-    public class TextBook :Iitem
+    public class TextBook 
     {      
        
         public string Title { get; set; }

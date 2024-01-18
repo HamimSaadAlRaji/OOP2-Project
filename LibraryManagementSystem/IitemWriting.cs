@@ -14,7 +14,7 @@ namespace LibraryManagementSystem
     {
         public void Write(string title, string description)
         {
-            var cd = Catalogue.cds.Find(c => c.Title == title);
+            Cd cd = Catalogue.cds.Find(c => c.Title == title);
             if (cd != null && cd.IsAvailable)
             {
                 cd.Description = description;
