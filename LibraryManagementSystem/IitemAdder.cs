@@ -15,8 +15,8 @@ namespace LibraryManagementSystem
     {        
         public void  AddItem(string title, string author, string description)
         {
-            var researchookcheck = Catalogue.researchbooks.Find(b => b.Title == title);
-            if(researchookcheck == null)
+            var item = Catalogue.researchbooks.Find(b => b.Title == title);
+            if(item == null)
             {
                 ResearchBook researchBook = new ResearchBook(title, author, description);
                 Catalogue.researchbooks.Add(researchBook);
@@ -33,8 +33,8 @@ namespace LibraryManagementSystem
     {
         public void AddItem(string title, string author, string description)
         {
-            var bookcheck = Catalogue.textbooks.Find(b => b.Title == title);
-            if (bookcheck == null)
+            var item = Catalogue.textbooks.Find(b => b.Title == title);
+            if (item == null)
             {
                 TextBook textBook = new TextBook(title, author, description);
                 Catalogue.textbooks.Add(textBook);
@@ -51,8 +51,8 @@ namespace LibraryManagementSystem
     {
         public void AddItem(string title, string author, string description)
         {
-            var cdcheck= Catalogue.cds.Find(b => b.Title == title);
-            if (cdcheck == null)
+            var item= Catalogue.cds.Find(b => b.Title == title);
+            if (item == null)
             {
                 Cd cd = new Cd(title, author, description);
                 Catalogue.cds.Add(cd);
@@ -66,8 +66,8 @@ namespace LibraryManagementSystem
         {
             public void AddItem(string title, string author, string description)
             {
-                var dvdcheck= Catalogue.dvds.Find(b => b.Title == title);
-                if (dvdcheck == null)
+                var item= Catalogue.dvds.Find(b => b.Title == title);
+                if (item == null)
                 {
                     DVD dvd = new DVD(title, author, description);
                     Catalogue.dvds.Add(dvd);
