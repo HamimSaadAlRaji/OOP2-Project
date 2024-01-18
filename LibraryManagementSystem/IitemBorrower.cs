@@ -15,19 +15,19 @@ namespace LibraryManagementSystem
     {
         public void BorrowItem(string title)
         {
-            var book = Catalogue.textbooks.Find(b => b.Title == title);
-            if (book != null && book.IsAvailable)
+            var item = Catalogue.textbooks.Find(b => b.Title == title);
+            if (item != null && item.IsAvailable())
             {
-                book.IsAvailable = false;
-                Console.WriteLine($"Successfully Borrowed Textbook {book.Title} ");
+                item.setAvailibility(false);
+                Console.WriteLine($"Successfully Borrowed Textbook {item.Title} ");
             }
-            else if( book == null ) 
+            else if( item == null ) 
             {
                 Console.WriteLine($"Text Book with title '{title}' not found.");
             }
             else
             {
-                Console.WriteLine($"TextBook {book.Title} is not available for borrowing");
+                Console.WriteLine($"TextBook {item.Title} is not available for borrowing");
             }
         }
     }
@@ -36,19 +36,19 @@ namespace LibraryManagementSystem
     {
         public void BorrowItem(string title)
         {
-            var cd = Catalogue.cds.Find(c => c.Title == title);
-            if (cd != null && cd.IsAvailable)
+            var item = Catalogue.cds.Find(c => c.Title == title);
+            if (item != null && item.IsAvailable())
             {
-                cd.IsAvailable = false;
-                Console.WriteLine($"Successfully Borrowed CD {cd.Title}");
+                item.setAvailibility(false);
+                Console.WriteLine($"Successfully Borrowed CD {item.Title}");
             }
-            else if (cd == null)
+            else if (item == null)
             {
                 Console.WriteLine($"CD with title '{title}' not found.");
             }
             else
             {
-                Console.WriteLine($"CD {cd.Title} is not available for borrowing");
+                Console.WriteLine($"CD {item.Title} is not available for borrowing");
             }
         }
     }
@@ -57,19 +57,19 @@ namespace LibraryManagementSystem
     {
         public void BorrowItem(string title)
         {
-            var dvd = Catalogue.dvds.Find(d => d.Title == title);
-            if (dvd != null && dvd.IsAvailable)
+            var item = Catalogue.dvds.Find(d => d.Title == title);
+            if (item != null && item.IsAvailable())
             {
-                dvd.IsAvailable = false;
-                Console.WriteLine($"Successfully Borrowed DVD {dvd.Title}");
+                item.setAvailibility(false);
+                Console.WriteLine($"Successfully Borrowed DVD {item.Title}");
             }
-            else if (dvd == null)
+            else if (item == null)
             {
                 Console.WriteLine($"DVD with title '{title}' not found.");
             }
             else
             {
-                Console.WriteLine($"DVD {dvd.Title} is not available for borrowing");
+                Console.WriteLine($"DVD {item.Title} is not available for borrowing");
             }
         }
     }

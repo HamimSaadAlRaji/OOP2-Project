@@ -14,19 +14,19 @@ namespace LibraryManagementSystem
     {
         public void Write(string title, string description)
         {
-            Cd cd = Catalogue.cds.Find(c => c.Title == title);
-            if (cd != null && cd.IsAvailable)
+            Cd item = Catalogue.cds.Find(c => c.Title == title);
+            if (item != null && item.IsAvailable())
             {
-                cd.Description = description;
-                Console.WriteLine($"Successfully Wrote into CD {cd.Title}");
+                item.Description = description;
+                Console.WriteLine($"Successfully Wrote into CD {item.Title}");
             }
-            else if (cd == null)
+            else if (item == null)
             {
                 Console.WriteLine($"CD with title '{title}' not found.");
             }
             else
             {
-                Console.WriteLine($"CD {cd.Title} is currently not available for Writing");
+                Console.WriteLine($"CD {item.Title} is currently not available for Writing");
             }
         }
     }

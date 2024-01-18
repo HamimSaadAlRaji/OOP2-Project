@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static LibraryManagementSystem.CDAdder;
 
-namespace LibraryManagementSystem
+namespace LibraryManagementSystem 
 {
     class LibraryManagementSystem
     {
@@ -106,7 +106,7 @@ namespace LibraryManagementSystem
 
         private static void HandleTextBook()
         {
-            string[] Options = { "Add New TextBook", "Remove TextBook", "Search TextBook", "Borrow Textbook", "Go Back" };
+            string[] Options = { "Add New TextBook", "Remove TextBook", "Display Textbooks", "Search TextBook", "Borrow Textbook", "Go Back" };
             Menu menu = new Menu(Options);
             int choice = menu.Run();
            
@@ -124,24 +124,30 @@ namespace LibraryManagementSystem
                     IitemRemover RemoveTextBook = new TextBookRemover();
                     Catalogue.RemoveFromLibrary(RemoveTextBook);
                     break;
+
                 case 2:
+                    Console.Clear();
+                    IitemDisplay iitemDisplay = new TextBookDisplay();
+                    Catalogue.DisplayLibraryItem(iitemDisplay);
+                    break;
+                case 3:
                     Console.Clear();
                     ISearchItem searchItem = new TextBookSearcher();
                     Catalogue.SearchFromLibrary(searchItem);
                     break;
-                case 3:
+                case 4:
                     Console.Clear();
                     IitemBorrower iitemBorrower = new BorrowTextBook();
                     Catalogue.BorrowFromLibrary(iitemBorrower);
                     break;
-                case 4:
+                case 5:
                     return;
             }
         }
 
         private static void HandleCD()
         {
-            string[] Options = { "Add New CD", "Remove CD", "Search CD", "Borrow CD", " Write In CD ", "Go Back" };
+            string[] Options = { "Add New CD", "Remove CD", "Display CDs", "Search CD", "Borrow CD", " Write In CD ", "Go Back" };
             Menu menu = new Menu(Options);
             int choice = menu.Run();
             Console.WriteLine("CD Options:");
@@ -168,27 +174,33 @@ namespace LibraryManagementSystem
                     break;
                 case 2:
                     Console.Clear();
+                    IitemDisplay iitemDisplay = new CDDisplay();
+                    Catalogue.DisplayLibraryItem(iitemDisplay);
+                    break;
+
+                case 3:
+                    Console.Clear();
                     ISearchItem searchItem = new CDSearcher();
                     Catalogue.SearchFromLibrary(searchItem);
                     break;
-                case 3:
+                case 4:
                     Console.Clear();
                     IitemBorrower iitemBorrower = new BorrowCD();
                     Catalogue.BorrowFromLibrary(iitemBorrower);
                     break;
-                case 4:
+                case 5:
                     Console.Clear();
                     IitemWriting WriteCd = new WriteInCD();
                     Catalogue.WriteIntoItem(WriteCd);
                     break;
-                case 5:
+                case 6:
                     return;
             }
         }
 
         private static void HandleDVD()
         {
-            string[] Options = { "Add New DVD", "Remove DVD", "Search DVD", "Borrow DVD", "Go Back" };
+            string[] Options = { "Add New DVD", "Remove DVD", "Display DVDs", "Search DVD", "Borrow DVD", "Go Back" };
             Menu menu = new Menu(Options);
             int choice = menu.Run();            
 
@@ -205,17 +217,23 @@ namespace LibraryManagementSystem
                     IitemRemover RemoveDVD = new DVDRemover();
                     Catalogue.RemoveFromLibrary(RemoveDVD);
                     break;
+
                 case 2:
+                    Console.Clear();
+                    IitemDisplay iitemDisplay = new DVDDisplay();
+                    Catalogue.DisplayLibraryItem(iitemDisplay);
+                    break;
+                case 3:
                     Console.Clear();
                     ISearchItem searchItem = new DVDSearcher();
                     Catalogue.SearchFromLibrary(searchItem);
                     break;
-                case 3:
+                case 4:
                     Console.Clear();
                     IitemBorrower iitemBorrower = new BorrowDVD();
                     Catalogue.BorrowFromLibrary(iitemBorrower);
                     break;
-                case 4:
+                case 5:
                     return;
             }
         }
